@@ -1,10 +1,11 @@
-import React from 'react';
-import Billing from '../components/Billing'; 
+
+import React from 'react'
 
 const BillingPage = () => {
   return (
-    <Billing />
-  );
-};
+    <div>BillingPage</div>
+  )
+}
 
-export default BillingPage;
+export default BillingPage
+

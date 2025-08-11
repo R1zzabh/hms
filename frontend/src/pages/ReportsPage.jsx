@@ -1,10 +1,10 @@
-import React from 'react';
-import Reports from '../components/Reports'; 
+
+import React from 'react'
 
 const ReportsPage = () => {
   return (
-    <Reports />
-  );
-};
+    <div>ReportsPage</div>
+  )
+}
 
-export default ReportsPage;
+export default ReportsPage

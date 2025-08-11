@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 const doctors = [
   { id: "dr-smith", name: "Dr. Sarah Smith", specialty: "Cardiology" },

@@ -99,6 +99,7 @@ body {
 .submit-button:disabled {
   background-color: #93c5fd;
   cursor: not-allowed;
+  
 }
 
 .loading-spinner {
