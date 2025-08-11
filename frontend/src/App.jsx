@@ -21,13 +21,13 @@ function App() {
           {/* Protected Routes with Layout */}
           <Route
             element={
-              <ProtectedRoute>
+              /*<ProtectedRoute>*/
                 <Layout />
-              </ProtectedRoute>
+              /*</ProtectedRoute>*/
             }
           >
             <Route path="/" element={<DashboardPage />} />
-            <Route path="/patients" element={<PatientsPage />} />
+            <Route path="/register-patient" element={<PatientsPage />} />
             <Route path="/doctors" element={<DoctorsPage />} />
             <Route path="/appointments" element={<AppointmentsPage />} />
             <Route path="/billing" element={<BillingPage />} />
