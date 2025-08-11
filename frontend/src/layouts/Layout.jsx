@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "../components/Navbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
 import Footer from "../components/Footer.jsx";
+import { Outlet } from 'react-router-dom';
 
 const Layout = ({children}) => {
   return (
@@ -10,12 +10,10 @@ const Layout = ({children}) => {
       <Navbar />
 
       <div style={{ display: "flex", minHeight: "100vh" }}>
-        {/* Sidebar */}
-        <Sidebar />
-
+        
         {/* Main Content */}
         <main style={{ flex: 1, padding: "20px", background: "#f5f6fa" }}>
-          {children}
+          <Outlet/>
         </main>
       </div>
 

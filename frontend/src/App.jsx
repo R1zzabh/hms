@@ -10,6 +10,7 @@ import DoctorsPage from "./pages/DoctorsPage.jsx";
 import AppointmentsPage from "./pages/AppointmentsPage.jsx";
 import BillingPage from "./pages/BillingPage.jsx";
 import ReportsPage from "./pages/ReportsPage.jsx";
+import RegisterPatient from "./pages/RegisterPatient.jsx";
 
 function App() {
   return (
@@ -21,12 +22,13 @@ function App() {
           {/* Protected Routes with Layout */}
           <Route
             element={
-              <ProtectedRoute>
+              /*<ProtectedRoute>*/
                 <Layout />
-              </ProtectedRoute>
+              /*</ProtectedRoute>*/
             }
           >
             <Route path="/" element={<DashboardPage />} />
+            <Route path="/register-patient" element={<RegisterPatient/>}/>
             <Route path="/patients" element={<PatientsPage />} />
             <Route path="/doctors" element={<DoctorsPage />} />
             <Route path="/appointments" element={<AppointmentsPage />} />
