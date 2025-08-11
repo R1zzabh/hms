@@ -11,6 +11,7 @@ import {
   FaHospital,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 const NAV_ITEMS = [
   { label: "Register a Patient", icon: <FaUserPlus />, href: "/register-patient" },
@@ -22,7 +23,8 @@ const NAV_ITEMS = [
 
 function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const onEsc = (e) => {
       if (e.key === "Escape") setSidebarOpen(false);
@@ -37,10 +39,14 @@ function Navbar() {
         className="flex min-[1000px]:hidden justify-between items-center px-4 py-3 backdrop-blur-md bg-white/30 border-b border-[#D1D5DB]"
         style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.06)" }}
       >
-        <div className="flex items-center space-x-2 text-[#0A2540] font-bold text-lg">
+        <div 
+          onClick={() => navigate("/")} 
+          className="flex items-center space-x-2 text-[#0A2540] font-bold text-lg cursor-pointer hover:opacity-80 transition"
+        >
           <FaHospital className="text-[#1E40AF]" />
           <span>HMS</span>
         </div>
+
         <button
           aria-label="Open menu"
           onClick={() => setSidebarOpen(true)}
@@ -54,7 +60,10 @@ function Navbar() {
         className="hidden min-[1000px]:flex justify-between items-center px-6 py-3 backdrop-blur-md bg-white/30 border-b border-[#D1D5DB]"
         style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.06)" }}
       >
-        <div className="flex items-center space-x-2 text-[#0A2540] font-bold text-xl">
+        <div 
+          onClick={() => navigate("/")} 
+          className="flex items-center space-x-2 text-[#0A2540] font-bold text-lg cursor-pointer hover:opacity-80 transition"
+        >
           <FaHospital className="text-[#1E40AF]" />
           <span>HMS</span>
         </div>
